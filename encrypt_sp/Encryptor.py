@@ -7,9 +7,9 @@ class Encryptor:
             info = file.read()
         encrypted_info = rot13(info)
 
-        if not output:
-            with open(target_file, "w") as file:
-                file.write(encrypted_info)
+        with open(target_file if not output else output, "w") as file:
+            file.write(encrypted_info)
+
 
 
 
