@@ -1,8 +1,8 @@
 import string
 
 
-def rot13(message):
-    get_l = lambda letters, l: letters[(letters.index(l) + 13) % len(letters)]
+def rot13(message, idx=13):
+    get_l = lambda letters, l: letters[(letters.index(l) + idx) % len(letters)]
     ls = string.ascii_lowercase
     uls = string.ascii_uppercase
     code = []
